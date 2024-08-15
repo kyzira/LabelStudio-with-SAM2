@@ -1,6 +1,7 @@
 # Setting Up Label Studio with SAM2 on Local Storage
 
 This guide will walk you through setting up Label Studio on Ubuntu using WSL and SAM2 with Label Studio ML Backend on Windows.
+My User is called k3000, just replace it with your User.
 
 ## Install Label Studio
 
@@ -98,7 +99,7 @@ This guide will walk you through setting up Label Studio on Ubuntu using WSL and
 
 Label Studio cant export segments created with SAM to the YOLO or COCO format yet.
 My convert_image_names.py file can convert your filenames to the correct format, and MasksToCoco.ipynb can convert that into the Coco format.
-- To get started get your source images and copy them into a seperate folder. Now you have to export your labels in two formats. Firstly in png format, these will be your masks and secondly in as a json. 
+- To get started get your source images and copy them into a seperate folder. Now you have to export your labels in two formats. Firstly in png format, these will be your masks and secondly in as a json-min. 
 - Now you can run convert_image_names.py to rename your source images.
 - And finally with masks_to_coco.py convert them to the Coco json.
 
