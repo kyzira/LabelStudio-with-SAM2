@@ -1,13 +1,8 @@
-
-
-
-
-
 import json
 import os
 
 
-json_path = r"\\192.168.200.5\Buero\Projekte\Automatic damage detection\labelstudio-sam2\Conversion\annotations.json" 
+json_path = r"C:\Users\K3000\Downloads\info.json" 
 with open(json_path, 'r') as file:
     data = json.load(file)
 
@@ -19,7 +14,7 @@ for entry in data:
     image_to_task_map[original_image_path] = f'task-{task_id}'
 
 # Directory containing source images
-source_images_dir = r"\\192.168.200.5\Buero\Projekte\Automatic damage detection\labelstudio-sam2\Conversion\source_images"  
+source_images_dir = r"C:\Users\K3000\Downloads\source"
 
 # Rename the files
 for original_image_name, task_name in image_to_task_map.items():

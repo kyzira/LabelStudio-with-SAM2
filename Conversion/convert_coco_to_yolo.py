@@ -72,9 +72,9 @@ def coco_to_yolo(coco_json, images_dir, output_dir, train_ratio=0.7, val_ratio=0
     print("Dataset conversion and split completed.")
 
 # Paths to your dataset
-coco_json = r"\\192.168.200.5\Buero\Projekte\Automatic damage detection\labelstudio-sam2\Conversion\coco.json"
-images_dir = r"\\192.168.200.5\Buero\Projekte\Automatic damage detection\labelstudio-sam2\Conversion\source_images"
-output_dir = r"\\192.168.200.5\Buero\Projekte\Automatic damage detection\labelstudio-sam2\training\dataset"
+coco_json = r"C:\Users\K3000\Downloads\coco.json"
+images_dir = r"C:\Users\K3000\Downloads\source"
+output_dir = r"C:\Code Python\Train-YOLO\dataset"
 
 # Convert COCO dataset to YOLO format and split
 coco_to_yolo(coco_json, images_dir, output_dir)

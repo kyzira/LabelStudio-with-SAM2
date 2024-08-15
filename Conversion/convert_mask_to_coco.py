@@ -6,9 +6,9 @@ from PIL import Image
 import cv2
 
 # Paths to your images and masks
-images_dir = r"\\192.168.200.5\Buero\Projekte\Automatic damage detection\labelstudio-sam2\Conversion\source_images"
-masks_dir = r"\\192.168.200.5\Buero\Projekte\Automatic damage detection\labelstudio-sam2\Conversion\masks"
-output_json = r"\\192.168.200.5\Buero\Projekte\Automatic damage detection\labelstudio-sam2\Conversion\coco.json"
+images_dir = r"C:\Users\K3000\Downloads\source"
+masks_dir = r"C:\Users\K3000\Downloads\masks"
+output_json = r"C:\Users\K3000\Downloads\coco.json"
 
 # Initialize COCO format dictionary
 coco = {
