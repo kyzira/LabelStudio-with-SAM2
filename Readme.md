@@ -94,11 +94,34 @@ My User is called k3000, just replace it with your User.
 
 
 
+# **Additional Info**
+
+**NOT FINISHED YET**
+
+Your imported image are located at following url `http://<labelstudio ip adress>:8080/`
+
+
+
+
 
 # **Cant export SAM segments to coco format yet**
 
-Label Studio cant export segments created with SAM to the YOLO or COCO format yet.
-My convert_image_names.py file can convert your filenames to the correct format, and MasksToCoco.ipynb can convert that into the Coco format.
-- To get started get your source images and copy them into a seperate folder. Now you have to export your labels in two formats. Firstly in png format, these will be your masks and secondly in as a json-min. 
-- Now you can run convert_image_names.py to rename your source images.
-- And finally with masks_to_coco.py convert them to the Coco json.
+Label Studio cant export segments created with SAM to the YOLO or COCO format yet. 
+
+
+This folder `Conversion` contains the scripts needed for processing images and training models:
+
+- **Conversion Scripts:**
+  - **`convert_image_names.py`:** Renames source images to the required format.
+  - **`convert_mask_to_coco.py`:** Converts Label Studio masks into COCO JSON format.
+  - **`convert_coco_to_yolo.py`:** Converts COCO JSON to YOLO format.
+
+  **Workflow:**
+  > **Disclaimer:** Ensure you specify the correct folder paths in the scripts before running them.
+  1. Copy source images into a separate folder.
+  2. Export labels from Label Studio in two formats:
+     - PNG for masks.
+     - JSON-min for annotations.
+  3. Run `convert_image_names.py` to rename images.
+  4. Run `convert_mask_to_coco.py` to convert masks to COCO JSON.
+  5. Run `convert_coco_to_yolo.py` to convert COCO JSON to YOLO format.
