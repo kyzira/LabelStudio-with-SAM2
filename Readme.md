@@ -49,8 +49,16 @@ My User is called k3000, just replace it with your User.
 
 8. **In Label Studio, add a new project:**
     - Go into the settings and then into **Cloud Storage**.
-    - Add **Source Storage** and select **Local Files** as the Storage Type.
-    - The absolute path should be, e.g., `/home/k3000/testingdata1`.
+
+    1. **For Local Files:**
+        - Add **Source Storage** and select **Local Files** as the Storage Type.
+        - The absolute path should be, e.g., `/home/k3000/testingdata1`.
+    2. **For MinIO Bucket** Leave everything blank and unchecked, except for:
+        - Bucket Name: Enter the name of your Minio bucket.
+        - S3 Endpoint: This is crucial for Minio. Enter your Minio server's endpoint URL, such as http://localhost:9000 (assuming Minio runs locally) or http://your-minio-server:9000.
+        - Access Key ID: Enter the Access Key for your Minio instance.
+        - Secret Access Key: Enter the Secret Key for your Minio instance.
+
     - Remember to check "Treat every bucket object as a source file".
     - You can now add your storage. Click on **Sync Storage** to add your images to your project.
 
