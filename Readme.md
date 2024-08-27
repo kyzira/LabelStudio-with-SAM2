@@ -1,4 +1,4 @@
-# Setting Up Label Studio with SAM2 on Local Storage
+# Setting Up Label Studio with SAM2
 
 This guide will walk you through setting up Label Studio on Ubuntu using WSL and SAM2 with Label Studio ML Backend on Windows.
 My User is called k3000, just replace it with your User.
@@ -23,11 +23,18 @@ My User is called k3000, just replace it with your User.
     ```
 
 4. **Copy the following lines into the file, save with `CTRL + S`, and exit with `CTRL + X`:**
+    For Local Storage:
 
     ```bash
     export LABEL_STUDIO_LOCAL_FILES_SERVING_ENABLED=true
     export LABEL_STUDIO_LOCAL_FILES_DOCUMENT_ROOT=/home/k3000
     export PATH="$PATH:/home/k3000/.local/bin/"
+    ```
+
+    For minIO Storage:
+
+    ```bash
+    export LABEL_STUDIO_HOST=http://`<your ip adress>`:8080
     ```
 
 5. **Close the Terminal and reopen Ubuntu.**
@@ -96,9 +103,10 @@ My User is called k3000, just replace it with your User.
 
 # **Additional Info**
 
-**NOT FINISHED YET**
 
-Your imported image are located at following url `http://<labelstudio ip adress>:8080/`
+**Storage Option: If you want to use it in Docker**
+- Edit following line in the docker-compose.yml and add your ip adress, so the images are hostet correct:
+    `LABEL_STUDIO_HOST=${LABEL_STUDIO_HOST:-}`
 
 
 
